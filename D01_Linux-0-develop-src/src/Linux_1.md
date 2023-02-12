@@ -17,13 +17,13 @@
 
 ## Part 1. Установка OS
 #### 1.1. Part 1. Установка Ubuntu 20.04 Server LTS без графической оболочки:
-![linux](src/images/part_1.png "Подсказка")
+(src/images/part_1.png "Подсказка")
 
 ## Part 2. Создание пользователя
 #### 2.1. Part 2. Создание пользователя и чтение логов через var_log
      $sudo useradd -G adm -s /bin/bash -m user_1
      $sudo passwd user_1 -> Задаем пароль юзеру
-![user_1](src/images/part_2.png "Подсказка")
+(src/images/part_2.png "Подсказка")
 
 ## Part 3. Настройка сети OS
 #### 3.1. Изменение имени пользователя на user-1:
