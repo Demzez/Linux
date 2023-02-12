@@ -17,7 +17,7 @@
 
 ## Part 1. Установка OS
 #### 1.1. Part 1. Установка Ubuntu 20.04 Server LTS без графической оболочки:
-![linux](/src/images/part_1.png](https://github.com/Demzez/Linux/blob/main/D01_Linux-0-develop-src/src/images/filtersshd.png "Подсказка")
+![linux](/D01_Linux-0-develop-src/src/images/filtersshd.png "Подсказка")
 
 ## Part 2. Создание пользователя
 #### 2.1. Part 2. Создание пользователя и чтение логов через var_log
