@@ -61,38 +61,38 @@
 
 С помощью команды ip a посмотреть посмотреть сущшествующие сетевые интерфейсы
 
-![linux_network](scrn/ipa1.png)
-![linux_network](scrn/ipa2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ipa1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ipa2.png)
 
 Описать сетевой интерфейс, соответствующий внутренней сети, на обеих машинах и задать следующие адреса и маски: ws1 - 192.168.100.10, маска /16, ws2 - 172.24.116.8, маска /12
 
-![linux_network](scrn/netplan1.png)
-![linux_network](scrn/netplan2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan2.png)
 
 Выполнить команду netplan apply для перезапуска сервиса сети
 
-![linux_network](scrn/apply1.png)
-![linux_network](scrn/apply2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/apply1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/apply2.png)
 
 ### 2.1. Добавление статического маршрута вручную
 
 Добавить статический маршрут от одной машины до другой и обратно при помощи команды вида ip r add.
 Пропинговать соединение между машинами.
 
-![linux_network](scrn/ipr1.png)
-![linux_network](scrn/ipr2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ipr1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ipr2.png)
 
 ### 2.2. Добавление статического маршрута с сохранением
 
 Добавить статический маршрут от одной машины до другой с помощью файла etc/netplan/00-installer-config.yaml
 
-![linux_network](scrn/netplan3.png)
-![linux_network](scrn/netplan4.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan3.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan4.png)
 
 Пропинговать соединение между машинами
 
-![linux_network](scrn/ping1_1.png)
-![linux_network](scrn/ping1_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping1_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping1_2.png)
 
 ## Part 3. Утилита iperf3
 
@@ -105,8 +105,8 @@
 
 ### 3.2. Утилита iperf3
 
-![linux_network](scrn/iperf3_1.png)
-![linux_network](scrn/iperf3_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/iperf3_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/iperf3_2.png)
 
 ## Part 4. Сетевой экран
 
@@ -120,13 +120,13 @@
 - запретить *echo reply* (машина не должна "пинговаться”, т.е. должна быть блокировка на OUTPUT)
 - разрешить *echo reply* (машина должна "пинговаться")
 
-![linux_network](scrn/iptables_1.png)
-![linux_network](scrn/iptables_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/iptables_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/iptables_2.png)
 
 Запустить файлы на обеих машинах командами chmod +x /etc/firewall.sh и /etc/firewall.sh
 
-![linux_network](scrn/chmod_1.png)
-![linux_network](scrn/chmod_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/chmod_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/chmod_2.png)
 
 - Разница в том, что если запрещающее правило стоит первым, то следующее разврешающее правило не будет работать
 
@@ -142,82 +142,82 @@ Nmap (“Network Mapper”) это утилита с открытым исход
        администраторы находят ее полезной для обычных задач, таких как контролирование структуры
        сети, управление расписаниями запуска служб и учет времени работы хоста или службы.
 
-![linux_network](scrn/ping2_1.png)
-![linux_network](scrn/ping2_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping2_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping2_2.png)
 
 ## Part 5. Статическая маршрутизация сети
 
-![linux_network](scrn/part5_network.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/part5_network.png)
 
 ### 5.1. Настройка адресов машин
 
 - w11
-![linux_network](scrn/netplan5.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan5.png)
 - w21
-![linux_network](scrn/netplan6.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan6.png)
 - w22
-![linux_network](scrn/netplan7.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan7.png)
 - r2
-![linux_network](scrn/netplan8.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan8.png)
 - r1
-![linux_network](scrn/netplan9.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan9.png)
 
 Команда netplan apply проверит наш конфиг на наличие ошибок и применит его в случае успеха. Если ошибок нет, то командой `ip -4 a` (IPv4) проверить, что адрес машины задан верно.
-![linux_network](scrn/n_apply_1.png)
-![linux_network](scrn/n_apply_2.png)
-![linux_network](scrn/n_apply_3.png)
-![linux_network](scrn/n_apply_4.png)
-![linux_network](scrn/n_apply_5.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/n_apply_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/n_apply_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/n_apply_3.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/n_apply_4.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/n_apply_5.png)
 
 Пропинговать ws22 с ws21 и r1 с ws11.
-![linux_network](scrn/ping_3_1.png)
-![linux_network](scrn/ping_3_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping_3_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping_3_2.png)
 
 ### 5.2. Включение переадресации IP-адресов.
 
 Для включения переадресации IP, выполнить команду на роутерах:
 `sysctl -w net.ipv4.ip_forward=1` 
-![linux_network](scrn/sysctl_1.png)
-![linux_network](scrn/sysctl_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/sysctl_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/sysctl_2.png)
 
 IP-переадресация включена на постоянной основе.
-![linux_network](scrn/ipforward_1.png)
-![linux_network](scrn/ipforward_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ipforward_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ipforward_2.png)
 
 ### 5.3. Установка маршрута по-умолчанию
 
 Настроить маршрут по-умолчанию (шлюз) для рабочих станций. Для этого добавить gateway4 ip роутера в файле конфигураций.
 
 - w11
-![linux_network](scrn/netplan10.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan10.png)
 - w21
-![linux_network](scrn/netplan11.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan11.png)
 - w22
-![linux_network](scrn/netplan12.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan12.png)
 
 Вызвать `ip r` и показать, что добавился маршрут в таблицу маршрутизации.
-![linux_network](scrn/appl1.png)
-![linux_network](scrn/appl2.png)
-![linux_network](scrn/appl3.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/appl1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/appl2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/appl3.png)
 
 Пропинговать с ws11 роутер r2 и показать на r2, что пинг доходит. Для этого использовать команду:
 `tcpdump -tn -i eth1`
-![linux_network](scrn/ping_4_1.png)
-![linux_network](scrn/ping_4_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping_4_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping_4_2.png)
 
 ### 5.4. Добавление статических маршрутов
 
 Добавить в роутеры r1 и r2 статические маршруты в файле конфигураций.
-![linux_network](scrn/netplan13.png)
-![linux_network](scrn/netplan14.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan13.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/netplan14.png)
 
 Вызвать `ip r` и показать таблицы с маршрутами на обоих роутерах.
-![linux_network](scrn/iprr_1.png)
-![linux_network](scrn/iprr_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/iprr_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/iprr_2.png)
 
 Запустить команды на ws11:
 `ip r list 10.10.0.0/[маска сети]` и `ip r list 0.0.0.0/0`
-![linux_network](scrn/iprl_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/iprl_1.png)
 
 Маршрут подбирается по таблице марштрутизаторов. Если маршрут выбран успешно то он будет передан. Если не успешно - пакет не будет передан. Если несколько совпадений - то для переадсресации будет выбран маршрут с самой длинной маской.
 
@@ -225,11 +225,11 @@ IP-переадресация включена на постоянной осн�
 
 Запустить на r1 команду дампа:
 `tcpdump -tnv -i eth0`
-![linux_network](scrn/tcpdump_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/tcpdump_1.png)
 
 При помощи утилиты **traceroute** построить список маршрутизаторов на пути от ws11 до ws21
-![linux_network](scrn/traceroute_1.png)
-![linux_network](scrn/icml.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/traceroute_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/icml.png)
 
 Каждый пакет проходит на своем пути определенное количество узлов, пока достигнет своей цели. Причем, каждый пакет имеет свое время жизни. Это количество узлов, которые может пройти пакет перед тем, как он будет уничтожен. Этот параметр записывается в заголовке TTL, каждый маршрутизатор, через который будет проходить пакет уменьшает его на единицу. При TTL=0 пакет уничтожается, а отправителю отсылается сообщение Time Exceeded.
 
@@ -239,86 +239,86 @@ IP-переадресация включена на постоянной осн�
 
 Запустить на r1 перехват сетевого трафика, проходящего через eth0 с помощью команды:
 `tcpdump -n -i eth0 icmp`
-![linux_network](scrn/ping_5_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping_5_1.png)
 Пропинговать с ws11 несуществующий IP с помощью команды `ping`
-![linux_network](scrn/ping_5_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping_5_2.png)
 
 ## Part 6. Динамическая настройка IP с помощью DHCP
 
 Для r2 настроить в файле */etc/dhcp/dhcpd.conf* конфигурацию службы **DHCP**. Указать адрес маршрутизатора по-умолчанию, DNS-сервер и адрес внутренней сети.
-![linux_network](scrn/dhcp1_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/dhcp1_1.png)
 В файле *resolv.conf* прописать `nameserver 8.8.8.8.`
-![linux_network](scrn/resolv1_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/resolv1_1.png)
 Перезагрузить службу **DHCP** командой `systemctl restart isc-dhcp-server`.
-![linux_network](scrn/sysctl_3.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/sysctl_3.png)
 Машину ws21 перезагрузить при помощи `reboot` и через `ip a` показать, что она получила адрес. Также пропинговать ws22 с ws21.
-![linux_network](scrn/ipaa.png)
-![linux_network](scrn/ping6_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ipaa.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping6_1.png)
 
 Указать MAC адрес у ws11, для этого в *etc/netplan/00-installer-config.yaml* надо добавить строки: `macaddress: 10:10:10:10:10:BA`, `dhcp4: true`
-![linux_network](scrn/ntplan_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ntplan_1.png)
 Для r1 настроить аналогично r2, но сделать выдачу адресов с жесткой привязкой к MAC-адресу (ws11). Провести аналогичные тесты
 
-![linux_network](scrn/dhcp2_1.png)
-![linux_network](scrn/range1_1.png)
-![linux_network](scrn/name1_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/dhcp2_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/range1_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/name1_1.png)
 ip до обновления и после.
-![linux_network](scrn/ipaa1_1.png)
-![linux_network](scrn/ipaa1_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ipaa1_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ipaa1_2.png)
 
 Запросить с ws21 обновление ip адреса
-![linux_network](scrn/ipaa2_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ipaa2_1.png)
 Пинг с обновленным ip у машины ws21
-![linux_network](scrn/ping7_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping7_1.png)
 
 ## Part 7. **NAT**
 
 В файле /etc/apache2/ports.conf на ws22 и r1 изменить строку Listen 80 на Listen 0.0.0.0:80, то есть сделать сервер Apache2 общедоступным.
 Запустить веб-сервер Apache командой service apache2 start на ws22 и r1.
 
-![linux_network](scrn/ports1_1.png)
-![linux_network](scrn/ports1_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ports1_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ports1_2.png)
 
 Добавить в фаервол, на r2 следующие правила:
 - Удаление правил в таблице filter - iptables -F
 - Удаление правил в таблице "NAT" - iptables -F -t nat
 - Отбрасывать все маршрутизируемые пакеты - iptables --policy FORWARD DROP
 
-![linux_network](scrn/iptables2_1.png)
-![linux_network](scrn/chmod2_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/iptables2_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/chmod2_1.png)
 
 Проверить соединение между ws22 и r1 командой `ping`
 
-![linux_network](scrn/ping8_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping8_1.png)
 
 Добавить в файл ещё одно правило:
 - Разрешить маршрутизацию всех пакетов протокола **ICMP**
-![linux_network](scrn/chmod3_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/chmod3_1.png)
 
 Проверить соединение между ws22 и r1 командой `ping`
-![linux_network](scrn/ping9_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ping9_1.png)
 
 Добавить в файл ещё два правила:
 - Включить **SNAT**, а именно маскирование всех локальных ip из локальной сети, находящейся за r2 (по обозначениям из Части 5 - сеть 10.20.0.0)
 - Включить **DNAT** на 8080 порт машины r2 и добавить к веб-серверу Apache, запущенному на ws22, доступ извне сети
-![linux_network](scrn/frwall1_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/frwall1_1.png)
 
 Проверить соединение по TCP для **SNAT**, для этого с ws22 подключиться к серверу Apache на r1.
-![linux_network](scrn/telnet1_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/telnet1_1.png)
 Проверить соединение по TCP для **DNAT**, для этого с r1 подключиться к серверу Apache на ws22 командой `telnet` 
-![linux_network](scrn/telnet1_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/telnet1_2.png)
 
 ## Part 8. Дополнительно. Знакомство с **SSH Tunnels**
 
 Запустить веб-сервер **Apache** на ws22 только на localhost (то есть в файле */etc/apache2/ports.conf* изменить строку `Listen 80` на `Listen localhost:80`)
-![linux_network](scrn/ports3_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/ports3_1.png)
 
 Воспользоваться *Local TCP forwarding* с ws21 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws21
 Воспользоваться *Remote TCP forwarding* c ws11 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws11
 
-![linux_network](scrn/lhost1_1.png)
-![linux_network](scrn/lhost1_2.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/lhost1_1.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/lhost1_2.png)
 
 
-![linux_network](scrn/lhost1_3.png)
-![linux_network](scrn/lhost1_4.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/lhost1_3.png)
+![linux_network](/DO2_LinuxNetwork/src/scrn/lhost1_4.png)
